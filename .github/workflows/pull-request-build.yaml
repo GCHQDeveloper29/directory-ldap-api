@@ -25,7 +25,7 @@ jobs:
       - name: Build with Apache Maven
         run: mvn -U clean install -Djava.awt.headless=true -fae -B
       - name: Copy jars
-        run: mkdir staging && cp target/*.jar staging
+        run: mkdir staging && cp **/target/*.jar staging
       - uses: actions/upload-artifact@v4
         with:
           path: staging
